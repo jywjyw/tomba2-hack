@@ -1,0 +1,29 @@
+1、补丁版本 v1.0，发布时间2018-12-07
+2、汉化以日版为基础
+3、由于使用了bios字库，PS1/2/3实机无法正常运行
+
+
+============= 文件说明 ====================
+SLPS_023.50： 补丁文件
+tomba2-ZH-bios.BIN： 汉化bios文件
+
+
+============= Windows运行方式 =============
+1、下载ePSXe2.x版本(ePSXe1.x的某些版本无法加载修改过的bios，且不支持PPF3格式的此补丁)
+2、Config -> bios -> 选择tomba2-ZH-bios.BIN
+3、把补丁SLPS_023.50放到ePSXe/patches目录下，或者用ppf-o-matic3.exe把补丁文件写入日版镜像中
+4、File -> Run ISO -> 选择光盘镜像
+
+
+==============Android运行方式==============
+1、下载ePSXe for Android
+2、选项 -> Bios -> 选择tomba2-ZH-bios.BIN
+3、用ppf-o-matic3.exe把补丁文件写入日版镜像中(适用于ePSXe全版本)
+   或者把补丁SLPS_023.50放到ePSXe/patches目录下(仅适用于ePSXe2.x版本)，
+4、开启游戏
+
+
+===============汉化组成员==============
+破解：草之头
+翻译：路西華
+改图：FEYA
