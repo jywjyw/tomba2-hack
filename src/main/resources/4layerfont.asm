@@ -8,6 +8,7 @@ lw a1,1324(s3) //int a1=writeAddr=&s3
 
 //写sprite指令
 lw a0,f570(s4) //3行:读取链表头变量, int v0=lastDmaAddr
+nop
 addu a0,a0,s1
 lw v0,0(a0)
 lui v1,0400 //3行:write DMA链表头,sprite占4个字
@@ -20,6 +21,7 @@ ori v1,v1,8080
 sw v1,0(a1)
 addiu a1,a1,4
 lw v0,8(s2) //3行:load XY and write
+nop
 sw v0,0(a1)
 addiu a1,a1,4
 
@@ -29,6 +31,7 @@ sll t3,v0,4
 addiu t3,t3,03c0  //t3=clutX
 srl t3,t3,4
 lh t2,e(s2) //load exist clut
+nop
 srl t2,t2,6
 addi t2,t2,fe10 //old base y = -496
 addiu t2,t2,01e0 //new base y = 480
@@ -60,6 +63,8 @@ addiu a1,a1,4
 //收尾
 sw a1,1324(s3)  //把写入指针保存起来,以便下次取用
 lhu v0,8(s2) 	//load X
+nop
 addiu v0,v0,a	//v0代表屏幕坐标x, 写完一个字符后, x+=10
-j 800794b4
 sh v0,8(s2)		//保存x
+j 800794b4
+nop

@@ -1,18 +1,33 @@
-1、补丁版本 v1.0，发布时间2018-12-07
+1、补丁版本 v1.1，发布时间2018-12-28
 2、汉化以日版为基础
-3、由于使用了bios字库，PS1/2/3实机无法正常运行
+3、由于使用了bios字库，PS1/PS2实机无法正常运行
 
 
 ============= 文件说明 ====================
 SLPS_023.50： 补丁文件
 tomba2-ZH-bios.BIN： 汉化bios文件
+PSP/tomba2.fnt:	PSP用字体文件
+工具/ppf-o-matic3.exe: 打补丁工具
 
 
 ============= Windows运行方式 =============
 1、下载ePSXe2.x版本(ePSXe1.x的某些版本无法加载修改过的bios，且不支持PPF3格式的此补丁)
-2、Config -> bios -> 选择tomba2-ZH-bios.BIN
+2、Config -> bios -> 选择tomba2-ZH-bios.BIN，取消勾选“Enable HLE Bios"
 3、把补丁SLPS_023.50放到ePSXe/patches目录下，或者用ppf-o-matic3.exe把补丁文件写入日版镜像中
 4、File -> Run ISO -> 选择光盘镜像
+
+
+============= PS3自制系统运行方式 =============
+1、用ppf-o-matic3.exe把补丁文件写入日版镜像中
+2、备份PS3中的ps1_rom.bin(玩其它用到bios字库的游戏时要替换回来)
+3、把tomba2-ZH-bios.BIN重命名为ps1_rom.bin，替换PS3原文件
+4、把镜像放到PSXISO目录下，用Multiman加载
+
+
+============= PSP运行方式 =============
+1、用ppf-o-matic3.exe把补丁文件写入日版镜像中
+2、用转换工具psx2psp把镜像转成PSP格式，放到PSP/GAMES目录下
+3、运行游戏后，使用金手指工具加载tomba2.fnt字体文件
 
 
 ==============Android运行方式==============

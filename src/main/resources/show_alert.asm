@@ -1,4 +1,4 @@
-//限制43条指令
+//limit 43 lines
 //in param. v1=char code(8xxx)
 address=8004f534
 lui v0,6480 //3行,write sprite
@@ -30,6 +30,7 @@ addiu t1,r0,a
 sh t1,5(a1) //h
 lui v0,800f	//3行,load saved link head
 lw a0,f570(v0)
+nop
 lw t1,c(a0) 
 lui t2,0400  //2行,拼接dma head
 or t1,t1,t2
