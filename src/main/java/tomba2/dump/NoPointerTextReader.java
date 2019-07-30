@@ -26,7 +26,7 @@ public class NoPointerTextReader {
 		RandomAccessFile exe = new RandomAccessFile(file, "r");
 		exe.seek(thisAddr);
 		byte[] buf=new byte[2];
-		while(exe.getFilePointer()<endAddr){
+		while(exe.getFilePointer()<=endAddr){
 			exe.read(buf, 0, 1);
 			if(!isEndFlag(buf[0])) {
 				if(prevIsEnd) {

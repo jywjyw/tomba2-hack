@@ -15,7 +15,8 @@ public class HexSearcher {
 	 */
 	public static void main(String[] args) throws IOException {
 		System.out.println("searching...");
-		HexSearcher.searchDir(Conf.jpdiskdir, "c582e082c882a282");
+//		HexSearcher.searchDir(Conf.jpdiskdir, "90b082ea82bd");
+		HexSearcher.searchDir("d:/hanhua/piaoliuji", "823d3282");
 		System.out.println("finish...");
 	}
 	 
